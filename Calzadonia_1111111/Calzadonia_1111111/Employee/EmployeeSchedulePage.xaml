@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calzadonia_1111111.Employee.EmployeeSchedulePage">
+    <ContentPage.Content>
+        
+        <StackLayout>
+            
+            <Picker x:Name="MonthPicker" Title="Выберите месяц" SelectedIndexChanged="MonthPicker_SelectedIndexChanged" />
+            <Picker x:Name="WeekPicker" Title="Выберите неделю" SelectedIndexChanged="WeekPicker_SelectedIndexChanged" />
+            <StackLayout x:Name="WeekDaysLayout" IsVisible="False">
+                <Label Text="Выберите время работы для каждого дня недели" FontSize="18" HorizontalOptions="Center" Margin="0,20,0,10" />
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Понедельник" FontSize="16" VerticalOptions="Center" />
+                    <DatePicker x:Name="MondayDatePicker" Date="{Binding MondayDate}" MinimumDate="{Binding MinimumDate}" MaximumDate="{Binding MaximumDate}" VerticalOptions="Center" />
+                    <TimePicker x:Name="MondayTimePicker" Time="{Binding MondayTime}" HorizontalOptions="Center" />
+                    
+                    
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
+                    <Label Text="Вторник" FontSize="16" VerticalOptions="Center" />
+                    <DatePicker x:Name="TuesdayDatePicker" Date="{Binding TuesdayDate}" MinimumDate="{Binding MinimumDate}" MaximumDate="{Binding MaximumDate}" VerticalOptions="Center" />
+                    <TimePicker x:Name="TuesdayTimePicker" Time="{Binding TuesdayTime}" HorizontalOptions="Center" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
+                    <Label Text="Среда" FontSize="16" VerticalOptions="Center" />
+                    <DatePicker x:Name="WednesdayDatePicker" Date="{Binding TuesdayDate}" MinimumDate="{Binding MinimumDate}" MaximumDate="{Binding MaximumDate}" VerticalOptions="Center" />
+                    <TimePicker x:Name="WednesdayTimePicker" Time="{Binding TuesdayTime}" HorizontalOptions="Center" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
+                    <Label Text="Четверг" FontSize="16" VerticalOptions="Center" />
+                    <DatePicker x:Name="ThursdayDatePicker" Date="{Binding TuesdayDate}" MinimumDate="{Binding MinimumDate}" MaximumDate="{Binding MaximumDate}" VerticalOptions="Center" />
+                    <TimePicker x:Name="ThursdayTimePicker" Time="{Binding TuesdayTime}" HorizontalOptions="Center" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
+                    <Label Text="Пятница" FontSize="16" VerticalOptions="Center" />
+                    <DatePicker x:Name="FridayDatePicker" Date="{Binding TuesdayDate}" MinimumDate="{Binding MinimumDate}" MaximumDate="{Binding MaximumDate}" VerticalOptions="Center" />
+                    <TimePicker x:Name="FridayTimePicker" Time="{Binding TuesdayTime}" HorizontalOptions="Center" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
+                    <Label Text="Суббота" FontSize="16" VerticalOptions="Center" />
+                    <DatePicker x:Name="SaturdayDatePicker" Date="{Binding TuesdayDate}" MinimumDate="{Binding MinimumDate}" MaximumDate="{Binding MaximumDate}" VerticalOptions="Center" />
+                    <TimePicker x:Name="SaturdayTimePicker" Time="{Binding TuesdayTime}" HorizontalOptions="Center" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
+                    <Label Text="Воскресенье" FontSize="16" VerticalOptions="Center" />
+                    <DatePicker x:Name="SundayDatePicker" Date="{Binding TuesdayDate}" MinimumDate="{Binding MinimumDate}" MaximumDate="{Binding MaximumDate}" VerticalOptions="Center" />
+                    <TimePicker x:Name="SundayTimePicker" Time="{Binding TuesdayTime}" HorizontalOptions="Center" />
+                </StackLayout>
+
+                <!-- Аналогично для остальных дней недели -->
+                <Button Text="Сохранить" Clicked="SaveButton_Clicked" Margin="0,20,0,0" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            
+             x:Class="Calzadonia_1111111.Admin.AdminLoginPage">
+    <Grid VerticalOptions="CenterAndExpand">
+        <Label Text="CALZEDONIA" FontAttributes="Bold" FontSize="24" HorizontalOptions="Center" Margin="0,0,0,20" />
+        <Label Text="admin" FontSize="12" HorizontalOptions="End" Margin="0,0,20,0" />
+        <StackLayout Padding="20">
+            <Entry Placeholder="Логин" x:Name="UsernameEntry" />
+            <Entry Placeholder="Пароль" x:Name="PasswordEntry" IsPassword="True" />
+            <Button Text="Войти" Clicked="LoginButton_Clicked" />
+            <Button Text="Войти как сотрудник" Clicked="EmployeeLoginButton_Clicked" VerticalOptions="End" />
+        </StackLayout>
+    </Grid>
+</ContentPage>
