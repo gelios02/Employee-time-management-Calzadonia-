@@ -4,6 +4,7 @@ Employee time control, display of worked hours of each employee. The ability to 
 In the Table folder, the Admin file, change the link to your Firebase
 
 Don't foget add rules into your Real Database(Firebase) 
+```
 {
   /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
   "rules": {
@@ -11,3 +12,4 @@ Don't foget add rules into your Real Database(Firebase)
     ".write": "auth==null"
   }
 }
+```
