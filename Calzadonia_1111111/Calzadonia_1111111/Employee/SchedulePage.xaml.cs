@@ -26,9 +26,10 @@ namespace Calzadonia_1111111.Employee
         public SchedulePage(string selectedEmployeeFullName)
         {
             InitializeComponent();
-
+            Admin1 admin1 = new Admin1();
+            string link4 = admin1.link;
             // Initialize FirebaseClient
-            firebaseClient = new FirebaseClient("https://hackers-df577-default-rtdb.firebaseio.com/");
+            firebaseClient = new FirebaseClient(link4);
 
             scheduleList = new ObservableCollection<string>();
             ScheduleListView.ItemsSource = scheduleList;
