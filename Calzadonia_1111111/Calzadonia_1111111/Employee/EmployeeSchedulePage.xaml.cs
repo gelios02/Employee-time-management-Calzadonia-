@@ -4,7 +4,6 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Calzadonia_1111111.Table;
 using Firebase.Database;
 using Firebase.Database.Query;
 using Xamarin.Forms;
@@ -26,9 +25,8 @@ namespace Calzadonia_1111111.Employee
         {
             InitializeComponent();
             BindingContext = this;
-            Admin1 admin1 = new Admin1();
-            string link6 = admin1.link;
-            firebaseClient = new FirebaseClient(link6);
+
+            firebaseClient = new FirebaseClient("https://hackers-df577-default-rtdb.firebaseio.com/");
             selectedEmployee = employee;
             selectedMonthStartDate = DateTime.Now.Date.AddDays(1 - DateTime.Now.Day);
 

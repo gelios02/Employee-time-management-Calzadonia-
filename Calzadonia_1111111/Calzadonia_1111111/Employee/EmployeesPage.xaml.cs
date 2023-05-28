@@ -20,10 +20,8 @@ namespace Calzadonia_1111111.Employee
 
         public EmployeesPage()
         {
-            Admin1 admin1 = new Admin1();
-            string link5 = admin1.link;
             InitializeComponent();
-            firebaseClient = new FirebaseClient(link5);
+            firebaseClient = new FirebaseClient("https://hackers-df577-default-rtdb.firebaseio.com/");
             employees = new List<Employee>();
         }
 

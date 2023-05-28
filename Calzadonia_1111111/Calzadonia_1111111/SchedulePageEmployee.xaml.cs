@@ -1,5 +1,4 @@
-﻿using Calzadonia_1111111.Table;
-using Firebase.Database;
+﻿using Firebase.Database;
 using Firebase.Database.Query;
 using System;
 using System.Collections.Generic;
@@ -54,10 +53,8 @@ namespace Calzadonia_1111111
 
         private async Task<Dictionary<string, Dictionary<string, string>>> LoadEmployeeSchedule(string fullName)
         {
-            Admin1 admin1 = new Admin1();
-            string link2 = admin1.link;
             // Загрузка графика работы сотрудника из базы данных
-            var firebaseClient = new FirebaseClient(link2);
+            var firebaseClient = new FirebaseClient("https://hackers-df577-default-rtdb.firebaseio.com/");
             var schedule = await firebaseClient.Child("schedules").Child(fullName).OnceSingleAsync<Dictionary<string, Dictionary<string, string>>>();
 
             return schedule;
