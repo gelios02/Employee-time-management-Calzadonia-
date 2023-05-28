@@ -19,8 +19,10 @@ namespace Calzadonia_1111111
         private readonly FirebaseClient firebaseClient;
         public MainPage()
         {
+            Admin1 admin1 = new Admin1();
+            string link3 = admin1.link;
             InitializeComponent();
-            firebaseClient = new FirebaseClient("https://hackers-df577-default-rtdb.firebaseio.com/");
+            firebaseClient = new FirebaseClient(link3);
         }
         private async void LoginButton_Clicked(object sender, EventArgs e)
         {

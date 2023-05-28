@@ -1,4 +1,5 @@
 ﻿using Calzadonia_1111111.Employee;
+using Calzadonia_1111111.Table;
 using Firebase.Database;
 using Firebase.Database.Query;
 using System;
@@ -30,9 +31,10 @@ namespace Calzadonia_1111111
         protected async override void OnAppearing()
         {
             base.OnAppearing();
-
+            Admin1 admin1 = new Admin1();
+            string link = admin1.link;
             // Получение графика работы сотрудника из Firebase по его FullName
-            var firebaseClient = new FirebaseClient("https://hackers-df577-default-rtdb.firebaseio.com/");
+            var firebaseClient = new FirebaseClient(link);
             var scheduleData = await firebaseClient
                 .Child("schedules")
                 .Child(selectedEmployeeFullName.Replace(".", ""))
@@ -77,8 +79,10 @@ namespace Calzadonia_1111111
 
         private async Task CalculateTotalHoursAsync()
         {
+            Admin1 admin1 = new Admin1();
+            string link1 = admin1.link;
             // Получение графика работы сотрудника из Firebase по его FullName
-            var firebaseClient = new FirebaseClient("https://hackers-df577-default-rtdb.firebaseio.com/");
+            var firebaseClient = new FirebaseClient(link1);
             var scheduleData = await firebaseClient
                 .Child("schedules")
                 .Child(selectedEmployeeFullName.Replace(".", ""))
